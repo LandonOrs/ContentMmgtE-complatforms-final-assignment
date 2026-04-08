@@ -24,3 +24,13 @@ function register_meal_reviews_cpt() {
     ));
 }
 add_action('init', 'register_meal_reviews_cpt');
+
+// Custom shortcode for promo banner
+function fitness_promo_shortcode() {
+    return '<div style="background-color: #f4f4f4; padding: 20px; text-align: center;">'
+        . '<h2>Get Fit with Landon Fitness!</h2>'
+        . '<p>Join our community and start your fitness journey today.</p>'
+        . '<a href="#" style="display: inline-block; padding: 10px 20px; background-color: #0073aa; color: #fff; text-decoration: none;">Sign Up Now</a>'
+        . '</div>';
+}
+add_shortcode('fitness_promo', 'fitness_promo_shortcode');
